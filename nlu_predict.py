@@ -1,6 +1,6 @@
 import numpy as np
-from keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.layers import Bidirectional
+from keras_preprocessing.sequence import pad_sequences
+from keras.layers import Bidirectional
 import pickle
 from tensorflow.python.keras.models import load_model
 
