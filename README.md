@@ -1,72 +1,73 @@
 # diana-alexa-clone
 Alexa clone built with a combination of an NLU model trained on the CLINC dataset and specific AIML responses taken from the ALICE chatbot.
 This project uses the Spotify API, so this is best run on a machine with Spotify installed.
+---
+Run ```base.py``` to get started!
 
-Run base.py to get started!
+Installation note - in addition to installing any relevant packages, you may need to downgrade your setuptools to 45.2.0.
 
-Some example prompts:
+---
+## Example Prompts
 
-help
-	'help'
-	'help me'
-	'i need assistance'
-	'i need some help'
-	'i need help'
+### Help
+- 'Help'
+- 'Help me'
+- 'I need assistance'
+- 'I need some help'
+- 'I need help'
 
-stop
-	'stop talking'
-	'quiet'
-	'shut up' (may result in a telling off!)
-	'no one is talking to you'
-	'nobody talking to you'
-	'nobody said your name'
-	'no one said your name'
+### Stop
+- 'Stop talking'
+- 'Quiet'
+- 'Shut up' (may result in a telling off!)
+- 'No one is talking to you'
+- 'Nobody talking to you'
+- 'Nobody said your name'
+- 'No one said your name'
 
-music
-	'play spotify'
-	'play some music'
-	'playlists'
-		'play my [playlist name] playlist'
-		'play [playlist name]'
-	'pause'
-	'unpause'
-	'what song is this'
-	'skip to the next track'
+### Music
+- 'Play spotify'
+- 'Play some music'
+- 'Playlists'
+  - 'Play my \[playlist name] playlist'
+  - 'Play \[playlist name]'
+- 'Pause'
+- 'Unpause'
+- 'What song is this'
+- 'Skip to the next track'
 
-reminders
-	'set reminder'
-	'remind me to'
-	'what are my reminders for [period]'
+### Reminders
+- 'Set reminder'
+- 'Remind me to'
+- 'What are my reminders for \[period]'
 
-timers
-	'set a timer'
-	'cancel timer'
+### Timers
+- 'Set a timer'
+- 'Cancel timer'
 
-datetime
-	'what time is it'
-	'what day is it'
-	'when is the next holiday'
+### Datetime
+- 'What time is it'
+- 'What day is it'
+- 'When is the next holiday'
 	
-searches
-	'who is [person]'
-	'what is an [object]'
-	'what is [term]'
-	'define [singular word]'
-	'spell [phrase]'
+### Searches
+- 'Who is \[person]'
+- 'What is an \[object]'
+- 'What is \[term]'
+- 'Define \[singular word]'
+- 'Spell \[phrase]'
 
-fun
-	'roll a dice'
-	'flip a coin'
-	'tell me a joke'
-	'tell me a fun fact'
+### Fun
+- 'Roll a dice'
+- 'Flip a coin'
+- 'Tell me a joke'
+- 'Tell me a fun fact'
 
-Notes - in addition to installing any relevant packages, you may need to downgrade your setuptools to 45.2.0.
-
-To do:
-	speed up mic adjustment
-	requirements.txt
-	alarms
-	personalised NLU training dataset
-	previous NLP processing
-	sentiment extraction
-	subject extraction
+## To do:
+- speed up mic adjustment
+- requirements.txt
+- alarms
+- personalised NLU training dataset
+- previous NLP processing
+- sentiment extraction
+- subject extraction
