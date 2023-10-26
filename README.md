@@ -64,10 +64,10 @@ Installation note - in addition to installing any relevant packages, you may nee
 - 'Tell me a fun fact'
 
 ## To do:
-- speed up mic adjustment
+- Speed up mic adjustment
 - requirements.txt
-- alarms
-- personalised NLU training dataset
-- previous NLP processing
-- sentiment extraction
-- subject extraction
+- Alarms
+- Personalised NLU training dataset
+- Previous NLP processing
+- Sentiment extraction
+- Subject extraction
