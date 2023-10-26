@@ -2,9 +2,20 @@
 Alexa clone built with a combination of an NLU model trained on the CLINC dataset and specific AIML responses taken from the ALICE chatbot.
 This project uses the Spotify API, so this is best run on a machine with Spotify installed.
 ---
-Run ```base.py``` to get started!
+Run ```base.py``` to get started! (For debug mode, run with --debug)
 
-Installation note - in addition to installing any relevant packages, you may need to downgrade your setuptools to 45.2.0.
+Dependencies:
+
+```toml
+tensorflow = ">=2.10.0, <=2.14.0"
+tensorflow-intel = ">=2.10.0, <=2.14.0"
+tensorflow-io-gcs-filesystem = [
+    { version = ">= 0.23.1", markers = "platform_machine!='arm64' or platform_system!='Darwin'" },
+    { version = "< 0.32.0", markers = "platform_system == 'Windows'" }
+]
+keras = ">=2.13.0"
+scikit-learn = "^1.3.2"
+```
 
 ---
 ## Example Prompts
@@ -68,6 +79,6 @@ Installation note - in addition to installing any relevant packages, you may nee
 - requirements.txt
 - Alarms
 - Personalised NLU training dataset
-- Previous NLP processing
+- More NLP
 - Sentiment extraction
 - Subject extraction
