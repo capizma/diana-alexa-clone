@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "diana-alexa-clone"
+version = "0.2.2"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.*"
+spotipy = "^2.23.0"
+wikipedia = "^1.4.0"
+pyttsx3 = "^2.90"
+aiml = "^0.9.2"
+numpy = "^1.26.1"
+pyaudio = "^0.2.13"
+pydictionary = "^2.0.1"
+holidays = "^0.35"
+pandas = "^2.1.1"
+speechrecognition = "^3.10.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
