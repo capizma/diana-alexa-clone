@@ -28,7 +28,7 @@ import os
 # Mute any AIML mismatch prints and Spotipy HTTPErrors as they are handled/the user is notified upon request
 logging.getLogger().setLevel(logging.CRITICAL)
 
-VERSION = 'v0.2.2'
+VERSION = 'v0.2.3'
 
 portrait = """
 
