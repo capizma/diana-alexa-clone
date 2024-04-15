@@ -82,3 +82,4 @@ scikit-learn = "^1.3.2"
 - More NLP
 - Sentiment extraction
 - Subject extraction
+- Typing mode
