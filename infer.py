@@ -9,6 +9,7 @@ import datetime
 from datetime import date, timedelta, datetime
 import pandas as pd
 from dateutil.relativedelta import relativedelta
+
 time.clock = time.time
 import logging
 
@@ -28,17 +29,28 @@ priority = [
     "who_made_you",
 ]
 
+kern_std = aiml.Kernel()
+kern_std.setTextEncoding(None)
+kern_std.bootstrap(learnFiles=["aiml/std.aiml", "aiml/rules.aiml"])
+
 kern = aiml.Kernel()
 kern.setTextEncoding(None)
-kern.bootstrap(learnFiles="aiml/rules.aiml")
+kern.bootstrap(learnFiles=["aiml/rules.aiml"])
 
 def extract_oper(text, sp):
-    context = nlu_predict.infer_intent(text)[0]
+    context = nlu.infer_intent(text)[0]
     out = "#OOS_" + text
 
     # Priority for any in list, these intents are likely correct
     if context in priority and context != "cancel":
         out = "#" + context.upper() + "_" + text
+        
+        if context != "repeat":
+            aiml_out = kern_std.respond(text)
+            
+            if aiml_out != "DEFAULT":
+                out = "#FORMALITY_" + aiml_out
+        
         return out
     else:
         aiml_out = kern.respond(text)
@@ -53,7 +65,7 @@ def extract_oper(text, sp):
                 return out
         else:
             # Cancel should override everything
-            if context[0] == "cancel":
+            if context == "cancel":
                 out = "#CANCEL"
 
             #################### CANCEL CHECKS ####################################
@@ -115,13 +127,13 @@ def extract_oper(text, sp):
             #################### WIKIPEDIA CHECKS ##################################
 
             if (
-                context[0] != "date"
-                and context[0] != "time"
-                and context[0] != "reminder"
-                and context[0] != "calendar"
-                and context[0] != "todo_list"
-                and context[0] != "definition"
-                and context[0] != "what_song"
+                context != "date"
+                and context != "time"
+                and context != "reminder"
+                and context != "calendar"
+                and context != "todo_list"
+                and context != "definition"
+                and context != "what_song"
                 and ("spelling" not in text)
             ):
                 for item in [
@@ -145,7 +157,7 @@ def extract_oper(text, sp):
 
             # In future, may potentially loop through high confidence contexts
 
-            for item in [context[0]]:
+            for item in [context]:
                 # We don't want more than 1 priority item or an item out of scope
                 if item in priority or item == "oos":
                     continue

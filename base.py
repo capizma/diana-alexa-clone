@@ -1,6 +1,7 @@
 import infer
 import spotipy
 import time
+
 time.clock = time.time
 from spotipy.oauth2 import SpotifyOAuth
 import wikipedia
@@ -183,7 +184,7 @@ def evoke_response(context_key):
             )
 
             for i in subset["text"].values:
-                out_text += i
+                out_text += str(i+" ")
 
             return out_text
         else:
