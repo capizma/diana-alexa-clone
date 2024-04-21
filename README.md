@@ -33,8 +33,6 @@ scikit-learn = "^1.3.2"
 - 'Shut up' (may result in a telling off!)
 - 'No one is talking to you'
 - 'Nobody talking to you'
-- 'Nobody said your name'
-- 'No one said your name'
 
 ### Music
 - 'Play spotify'
