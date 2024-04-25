@@ -32,7 +32,6 @@ scikit-learn = "^1.3.2"
 - 'Quiet'
 - 'Shut up' (may result in a telling off!)
 - 'No one is talking to you'
-- 'Nobody talking to you'
 
 ### Music
 - 'Play spotify'
@@ -74,7 +73,6 @@ scikit-learn = "^1.3.2"
 
 ## To do:
 - Speed up mic adjustment
-- requirements.txt
 - Alarms
 - Personalised NLU training dataset
 - More NLP
